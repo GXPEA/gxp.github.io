@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>答案之书</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .canvas {
+            width: 380px;
+            height: 700px;
+            position: relative;
+            background-image: url('https://img.alicdn.com/imgextra/i3/O1CN01FSw38T1Ne6L2mg3Mb_!!6000000001594-2-tps-936-1200.png');
+            background-size: cover;
+            background-position: center;
+        }
+        .answer-container {
+            position: absolute;
+            top: 44px;
+            left: 32px;
+            width: 300px;
+            height: 190px;
+            color: #F9DBB3;
+            font-family: 'SimSun', serif;
+            font-weight: bold;
+            font-size: 60px;
+            line-height: 65px;
+            overflow: hidden;
+        }
+        .explanation {
+            position: absolute;
+            top: 256px; /* 44 + 190 + 22 */
+            left: 32px;
+            width: 300px;
+            color: white;
+            font-family: 'SimSun', serif;
+            font-size: 16px;
+            line-height: 26px;
+        }
+        button {
+            position: absolute;
+            bottom: 16px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 200px;
+            height: 32px;
+            border-radius: 16px;
+            background-color: #1C1C1C;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-family: 'SimSun', serif;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="canvas">
+        <div class="answer-container" id="answer"></div>
+        <div class="explanation" id="explanation"></div>
+        <button onclick="showAnswer()">默念问题、寻找答案</button>
+    </div>
+
+    <script>
+        const answers = [
+            ["当下困难", "即将解决"],
+            ["心中的她", "即将出现"],
+            ["未知之路", "将有指引"],
+            ["风雨之后", "见彩虹现"],
+            ["迷茫之时", "方向自明"],
+            ["前路漫漫", "坚持就是胜利"],
+            ["黑夜过去", "黎明总会到来"],
+            ["困境之中", "总有出路"],
+            ["孤独一人", "并非无伴"],
+            ["心中疑惑", "真相就在眼前"],
+            ["未来可期", "梦想终会成真"],
+            ["挫折面前", "微笑面对"],
+            ["失败乃成功", "必经之路"],
+            ["勇气前行", "无所畏惧"],
+            ["信念坚定", "目标清晰"],
+            ["希望在远方", "勇敢追寻"],
+            ["挑战多多", "成长迅速"],
+            ["逆境重生", "更加坚强"],
+            ["心怀梦想", "勇往直前"],
+            ["坚持不懈", "成就梦想"]
+        ];
+
+        function getRandomAnswer() {
+            const randomIndex = Math.floor(Math.random() * answers.length);
+            return answers[randomIndex];
+        }
+
+        function showAnswer() {
+            const answerContainer = document.getElementById('answer');
+            const explanation = document.getElementById('explanation');
+            const [firstLine, secondLine] = getRandomAnswer();
+            answerContainer.textContent = `${firstLine}\n${secondLine}`;
+            explanation.textContent = "遇到问题、犹豫不决时，试试拿走这个简单的答案或暗示。";
+        }
+    </script>
+</body>
+</html>
