@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>答案之书</title>
+    <title>朱海雷兹</title>
     <style>
         body {
             margin: 0;
@@ -21,7 +21,7 @@
             background-size: cover;
             background-position: center;
         }
-        .answer-container {
+        .raze-container {
             position: absolute;
             top: 44px;
             left: 32px;
@@ -34,7 +34,7 @@
             line-height: 65px;
             overflow: hidden;
         }
-        .explanation {
+        .praise {
             position: absolute;
             top: 256px; /* 44 + 190 + 22 */
             left: 32px;
@@ -63,46 +63,75 @@
 </head>
 <body>
     <div class="canvas">
-        <div class="answer-container" id="answer"></div>
-        <div class="explanation" id="explanation"></div>
-        <button onclick="showAnswer()">默念问题、寻找答案</button>
+        <div class="raze-container" id="raze"></div>
+        <div class="praise" id="praise"></div>
+        <button onclick="showRaze()">朱海的雷兹</button>
     </div>
 
     <script>
-        const answers = [
-            ["当下困难", "即将解决"],
-            ["心中的她", "即将出现"],
-            ["未知之路", "将有指引"],
-            ["风雨之后", "见彩虹现"],
-            ["迷茫之时", "方向自明"],
-            ["前路漫漫", "坚持就是胜利"],
-            ["黑夜过去", "黎明总会到来"],
-            ["困境之中", "总有出路"],
-            ["孤独一人", "并非无伴"],
-            ["心中疑惑", "真相就在眼前"],
-            ["未来可期", "梦想终会成真"],
-            ["挫折面前", "微笑面对"],
-            ["失败乃成功", "必经之路"],
-            ["勇气前行", "无所畏惧"],
-            ["信念坚定", "目标清晰"],
-            ["希望在远方", "勇敢追寻"],
-            ["挑战多多", "成长迅速"],
-            ["逆境重生", "更加坚强"],
-            ["心怀梦想", "勇往直前"],
-            ["坚持不懈", "成就梦想"]
+        const razes = [
+            ["精准打击", "敌人难逃"],
+            ["火焰风暴", "燃烧一切"],
+            ["快速移动", "无处不在"],
+            ["烟雾弹投掷", "迷惑敌人"],
+            ["爆裂地雷", "致命陷阱"],
+            ["瞬移技能", "神出鬼没"],
+            ["爆炸喷射", "毁灭战场"],
+            ["灵活跳跃", "避开伤害"],
+            ["战术意识", "智胜天下"],
+            ["团队协作", "共战风雨"],
+            ["冷静分析", "决策明智"],
+            ["英勇战斗", "无所畏惧"],
+            ["战术布局", "掌控全场"],
+            ["精确瞄准", "百发百中"],
+            ["灵活应变", "适应变化"],
+            ["超强爆发", "瞬间击杀"],
+            ["持续输出", "压制对手"],
+            ["战术撤退", "保全自己"],
+            ["精准定位", "发现敌人"],
+            ["强大支援", "队友得力"],
+            ["火力覆盖", "封锁路线"],
+            ["烟幕掩护", "隐蔽行动"],
+            ["高压施加", "迫使投降"],
+            ["区域控制", "限制敌方"],
+            ["机动性强", "难以捉摸"],
+            ["技巧娴熟", "精通技能"],
+            ["心理战术", "扰乱心智"],
+            ["破坏建筑", "摧毁防御"],
+            ["关键击杀", "扭转局势"],
+            ["连招流畅", "无缝衔接"],
+            ["生存能力", "顽强抵抗"],
+            ["视野开阔", "洞察全局"],
+            ["反击迅速", "抓住机会"],
+            ["游击战术", "骚扰不断"],
+            ["远程攻击", "精准命中"],
+            ["近战格斗", "短兵相接"],
+            ["资源管理", "高效利用"],
+            ["地图知识", "熟悉地形"],
+            ["装备选择", "优化配置"],
+            ["心态稳定", "保持冷静"],
+            ["沟通协调", "团队合作"],
+            ["学习能力强", "不断提高"],
+            ["创新打法", "独树一帜"],
+            ["适应环境", "随机应变"],
+            ["抗压能力", "承受压力"],
+            ["领导才能", "指挥队友"],
+            ["战略眼光", "长远规划"],
+            ["专注细节", "精益求精"],
+            ["耐心等待", "时机成熟"]
         ];
 
-        function getRandomAnswer() {
-            const randomIndex = Math.floor(Math.random() * answers.length);
-            return answers[randomIndex];
+        function getRandomRaze() {
+            const randomIndex = Math.floor(Math.random() * razes.length);
+            return razes[randomIndex];
         }
 
-        function showAnswer() {
-            const answerContainer = document.getElementById('answer');
-            const explanation = document.getElementById('explanation');
-            const [firstLine, secondLine] = getRandomAnswer();
-            answerContainer.textContent = `${firstLine}\n${secondLine}`;
-            explanation.textContent = "遇到问题、犹豫不决时，试试拿走这个简单的答案或暗示。";
+        function showRaze() {
+            const razeContainer = document.getElementById('raze');
+            const praise = document.getElementById('praise');
+            const [firstLine, secondLine] = getRandomRaze();
+            razeContainer.textContent = `${firstLine}\n${secondLine}`;
+            praise.textContent = "遇到问题、犹豫不决时，试试用这个雷兹。";
         }
     </script>
 </body>
